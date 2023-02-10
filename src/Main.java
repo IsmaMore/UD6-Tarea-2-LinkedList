@@ -53,7 +53,7 @@ public class Main {
                 System.out.println("Reproduciendo --> Nada");
             }
             if (listaDeReproduccion.size() == 0){
-                System.out.println("No hay canciones en la lista.");
+                System.out.println("Terminando programa: No hay canciones en la lista.");
                 break;
             }else {
                 mostrarMenu();

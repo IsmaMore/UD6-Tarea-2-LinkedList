@@ -34,7 +34,7 @@ public class Album {
     private Cancion findSong(Cancion can, LinkedList<Cancion> playList){
             Iterator<Cancion> it = playList.iterator();
             for (int i = 0; it.hasNext(); i++){
-                if (it.next().getTitulo() == can.getTitulo()){
+                if (it.next().getTitulo().equalsIgnoreCase(can.getTitulo())){
                     return playList.get(i);
                 }
             }
