@@ -115,12 +115,18 @@ public class Main {
                         break;
                     case 3:
                         if (it.hasPrevious()) {
-                            if (reproduc) {
+                            if (reproduc && direccion) {
                                 it.previous();
                                 System.out.println("Reproduciendo " + "pista " + (it.nextIndex() + 1) + " --> " + it.next().toString());
+                            }else if (reproduc) {
+                                it.next();
+                                System.out.println("Reproduciendo " + "pista " + (it.previousIndex() + 1) + " --> " + it.previous().toString());
                             }
                         }else if (it.hasNext()){
-                            if (reproduc) {
+                            if (reproduc && direccion) {
+                                it.previous();
+                                System.out.println("Reproduciendo " + "pista " + (it.nextIndex() + 1) + " --> " + it.next().toString());
+                            }else if (reproduc) {
                                 it.next();
                                 System.out.println("Reproduciendo " + "pista " + (it.previousIndex() + 1) + " --> " + it.previous().toString());
                             }
@@ -134,7 +140,6 @@ public class Main {
                         }
                         break;
                     case 5:
-                        System.out.println(it.nextIndex());
                         break;
                     case 6:
                         if (listaDeReproduccion.size() > 0){
